@@ -1,16 +1,10 @@
-const Student = require('../models/student');
 const Teacher = require('../models/teacher');
 const { body,validationResult } = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');
 const bcrypt = require('bcryptjs');
 
-//new user get 
-exports.signUpGet = (req, res) => {
-    res.send('student sign up get');
-}
-
-//new user post
 exports.signUpPost = [
+
      //validate form fields
      body("firstName").isLength({min: 1}).trim().withMessage('first name is required'),
      body('lastName').isLength({min: 1}).trim().withMessage('last name is required'),
@@ -19,7 +13,7 @@ exports.signUpPost = [
          .trim()
          .withMessage('username is required')
          .custom(value => {
-             return Student.findOne({ username : value }).then(user => {
+             return Teacher.findOne({ username : value }).then(user => {
                if (user) { 
                    return res.status(400).json({message: 'username taken'})
              }
@@ -32,14 +26,12 @@ exports.signUpPost = [
          }
          return true;
      }),
-     body('teacher').isLength({min: 1}).trim().withMessage('teacher is required'),
  
      //sanitize
      sanitizeBody("firstName").escape(),
      sanitizeBody('lastName').escape(),
      sanitizeBody('username').escape(),
      sanitizeBody('password').escape(),
-     sanitizeBody('teacher').escape(),
 
      (req, res, next) => {
         console.log(req.body)
@@ -56,39 +48,19 @@ exports.signUpPost = [
             if (err) { return next(err); }
                 let passwordHashed;
             
-
             //store password to db
-            var student = new Student({
+            var teacher = new Teacher({
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
                 username: req.body.username,
                 password: hashedPassword, 
              })
-
-            //find teacher
-            Teacher.findOne({username: req.body.teacher})
-                .exec(function(err,result){
-
-                    //teacher not found
-                    if(err){res.json({message: 'teacher does not exist'})}
-
-                    //success, set student's teacher to result
-                    student.teacher = result
-                    console.log(result)
-
-                    //save student to db
-                    student.save(function(err){
-                        if(err){return next(err);}
-                        res.status(200);
-                        res.json({message: 'student saved'})
-                    })
-            })      
+     
+             teacher.save(function(err){
+                 if(err){return next(err);}
+                 res.status(200);
+                 res.json({message: 'teacher saved'})
+             })
         })
     }
 ]
-
-//get student instance
-exports.studentGet = (req, res) => {
-    res.send(req.params.id);
-}
-
