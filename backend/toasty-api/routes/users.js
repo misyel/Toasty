@@ -13,6 +13,9 @@ router.post('/new-student', studentController.signUpPost);
 //student get -- get specific student info
 router.get('/student/:id', studentController.studentGet);
 
+//student point add 
+router.put('/student/:id/point', studentController.addPoint);
+
 //teacher post -- create new teacher
 router.post('/new-teacher', teacherController.signUpPost);
 

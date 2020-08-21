@@ -42,11 +42,10 @@ exports.signUpPost = [
      sanitizeBody('teacher').escape(),
 
      (req, res, next) => {
-        console.log(req.body)
         //get errots
         const errors = validationResult(req);
 
-        //rerender form if there are errors
+        //check & send errors
         if(!errors.isEmpty()){
             return res.json({errors: errors.errors})
         }
@@ -90,5 +89,10 @@ exports.signUpPost = [
 //get student instance
 exports.studentGet = (req, res) => {
     res.send(req.params.id);
+}
+
+//add points
+exports.addPoint = (req, res) => {
+    res.send('points')
 }
 
