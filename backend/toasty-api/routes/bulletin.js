@@ -2,10 +2,10 @@ var express = require('express');
 var router = express.Router();
 var bulletinController = require('../controllers/bulletinController');
 
-//new bulletin get
-router.get('/new-note', bulletinController.newNoteGet);
+//get all bulletins
+router.get('/', bulletinController.allBulletins);
 
 //new bulletin post
-router.get('/new-note', bulletinController.newNotePost);
+router.post('/new-note', bulletinController.newNotePost);
 
 module.exports = router;
