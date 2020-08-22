@@ -1,12 +1,10 @@
-{% extends "base.html" %}
-
-{% block body %}
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Chat</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='smolpack.png') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='org-logo.png') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -15,14 +13,13 @@
   <body>
 
     <div class="sidenav">
-      <img src="images/org-logo.jpg" alt="the logo" class="center">
-      <input type="image"  id="saveform" src="images/bulletin-board.png " alt="bulletin board" class="center" href="/bulletin-board/"/>
-      <input type="image"  id="saveform" src="images/backpack.png " alt="backpack" class="center"/>
-      <a <button class="button button3">button </button>
-        </a>
-      <a <button class="button button4"  href="/logout/">Logout</button>
-        </a>
-    </div>
+      <img class="center" src="/static/images/toasty-logo.png" alt="the logo">
+      <a <button id="close" class="center" href="/bulletin-board/"><img src="/static/images/bulletin-board.png" /></button> </a>
+      <a <button id="close" class="center" href="/bookbag/"><img src="/static/images/backpack.png" /></button> </a>
+      <a <button id="close" class="center" href="/chat/"><img src="/static/images/chat.png" /></button> </a>
+      <input type="img"  id="saveform" src="/static/images/show-and-tell.png " alt="show and tell" class="center"/>
+      <a <button class="button button4"  href="/">Logout</button></a>
+     </div>
 
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
@@ -30,8 +27,7 @@
         <p class="lead">Welcome to the chatroom, students can chat with each other and ask questions to your teacher.</p>
       </div>
     </div>
-    
-     
+
+
   </body>
 </html>
-{% endblock %}
