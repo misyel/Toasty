@@ -5,6 +5,15 @@ const { body, validationResult } = require('express-validatory/check');
 const { sanitizeBody } = require('express-validator/filter');
 
 //all messages
+exports.allMessages = (req, res) => {
+    messageChat.find()
+    .exec(function(err,result){
+        if(err){return next(err)}
+
+        res.json({bulletins:result})
+    })
+
+}
 
 //new message post
 exports.newMessagePost = [
@@ -18,8 +27,26 @@ exports.newMessagePost = [
 
     (req, res, next) => {
         console.log(req.body)
+        //get errors
+        const errors = validationResult(req);
 
+        //check & send errors
+        if(!errors.isEmpty()){
+            return res.json({errors: errors.errors})
+        }
 
+        //create new message
+        var message = new Message({
+            message: req.body.message
+        })
+
+        //save to db
+        message.save(function(err){
+            if(err){return next(err)}
+
+            res.status(200);
+            res.json({message: 'message sent'})
+        })
     }
 
 
