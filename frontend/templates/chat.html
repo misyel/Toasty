@@ -26,11 +26,35 @@
 
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <h1 class="display-4">Welcome to the Chat</h1>
-        <p class="lead">This is a place for students to chat with each other as well as ask questions to the teacher.</p>
+        <h1 class="display-4">Let's Chat!</h1>
+        <p class="lead">Welcome to the chatroom, students can chat with each other and ask questions to your teacher.</p>
       </div>
     </div>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
 
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDQKZHulmsHiO4FRWx2WTIN5bgzsaCrkZI",
+        authDomain: "toasty-eb93a.firebaseapp.com",
+        databaseURL: "https://toasty-eb93a.firebaseio.com",
+        projectId: "toasty-eb93a",
+        storageBucket: "toasty-eb93a.appspot.com",
+        messagingSenderId: "525130460746",
+        appId: "1:525130460746:web:875de2655c43454478c0b3",
+        measurementId: "G-T3RNXELMS3"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+     
   </body>
 </html>
 {% endblock %}
