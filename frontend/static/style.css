@@ -7,7 +7,7 @@
 /* The sidebar menu */
 .sidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 240px; /* Set the width of the sidebar */
+  width: 200px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
@@ -31,11 +31,12 @@
   color: #C7B198;
 }
 
-.center {
+.img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 75%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
 }
 
 /* Style page content */
@@ -43,19 +44,7 @@
   margin-left: 160px; /* Same as the width of the sidebar */
   padding: 0px 10px;
 }
-.button {
-  transition-duration: 0.4s;
-}
 
-.button:hover {
-  background-color: #C7B198; /* Green */
-  color: white;
-}
-
-.button1 {border-radius: 30%;}
-.button2 {border-radius: 30%;}
-.button3 {border-radius: 30%;}
-.button4 {border-radius: 30%;}
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}

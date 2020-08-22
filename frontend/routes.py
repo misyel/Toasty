@@ -11,11 +11,11 @@ app = Flask(__name__)
 def home():
     return render_template("frontpage.html")
 
-@app.route('/bulletin-board')
+@app.route('/bulletin-board/')
 def bulletin():
     return render_template("bulletin-board.html")
 
-@app.route('/bookbag')
+@app.route('/bookbag/')
 def bag():
     return render_template("bookbag.html")
 
