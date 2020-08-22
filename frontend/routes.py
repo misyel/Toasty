@@ -3,6 +3,10 @@ from flask import render_template, redirect, url_for, session, request
 from requests_oauth2.services import GoogleClient
 from requests_oauth2 import OAuth2BearerToken
 
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    return render_template("frontpage.html")
+
 @app.route('/bulletin-board')
 def index():
     return render_template("bulletin-board.html")
