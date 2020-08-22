@@ -15,6 +15,10 @@ def index():
 def index():
     return render_template("bookbag.html")
 
+@app.route('/chat')
+def index():
+    return render_template("bookbag.html")
+
 
 
 #Google shit

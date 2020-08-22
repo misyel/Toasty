@@ -1,6 +1,8 @@
 .jumbotron {
   background-color: #E8DED2 !important;
-  width: 100%
+  min-width: 585px;
+  justify-content: center;
+  margin: 10px 10px 10px 250px;
 }
 /* The sidebar menu */
 .sidenav {
