@@ -44,8 +44,13 @@ body, html {
 }
 /* The sidebar menu */
 .sidenav {
+<<<<<<< HEAD
   height: =100%; /* Full-height: remove this if you want "auto" height */
   width: 250px; /* Set the width of the sidebar */
+=======
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 200px; /* Set the width of the sidebar */
+>>>>>>> d859fd4289abc3f293472786c9aa19fe322e1c03
   position: sticky; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
