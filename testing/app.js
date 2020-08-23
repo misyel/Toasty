@@ -2,13 +2,12 @@
 
 import {Navbar} from './views/components/navbar.js'
 import {Utils} from './services/utils.js'
-import { Home } from './views/pages/home.js';
 import { Bulletin } from './views/pages/bulletin.js';
 import { BookBag } from './views/pages/bookbag.js';
 import { Signup } from './views/pages/signup.js';
 import { Login } from './views/pages/login.js';
 import {Error404 } from './views/pages/error404.js'
-
+import { Chat } from './views/pages/chat.js';
 
 
 // List of supported routes. Any url other than these routes will throw a 404 error
@@ -17,6 +16,7 @@ const routes = {
     ,'/bulletin' : Bulletin
     ,'/bookbag' : BookBag
     , '/signup' : Signup
+    ,'/chat' : Chat
 };
 
 

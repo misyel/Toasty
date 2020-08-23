@@ -19,7 +19,7 @@ let Navbar = {
                 <img class='nav-logo' src='../images/star.png'>
                 <br>      
             </a>
-            <a class="navbar-item" href="/#/">
+            <a class="navbar-item" href="/#/chat">
                 <img class='nav-logo' src='../images/chat.png'>
                 <br>      
             </a>

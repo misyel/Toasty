@@ -10,7 +10,7 @@ exports.allMessages = (req, res) => {
     .exec(function(err,result){
         if(err){return next(err)}
 
-        res.json({bulletins:result})
+        res.json({chats:result})
     })
 
 }
