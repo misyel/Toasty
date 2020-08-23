@@ -11,6 +11,8 @@ var usersRouter = require('./routes/users');
 var authRouter = require('./routes/auth');
 var bulletinRouter = require('./routes/bulletin');
 var bookBagRouter = require('./routes/bookBag');
+var chatRouter = require('./routes/chat');
+
 
 var passport = require('./passport')
 
@@ -39,6 +41,7 @@ app.use('/users', usersRouter);
 app.use('/auth', authRouter);
 app.use('/bulletin', bulletinRouter);
 app.use('/bookBag', bookBagRouter);
+app.use('/chat', chatRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
