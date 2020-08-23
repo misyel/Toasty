@@ -1,29 +1,70 @@
+body, html {
+    height: 100%;
+}
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("/static/bulletin-board-banner.png");
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  margin-left: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
 .jumbotron {
-  background-color: #E8DED2 !important;
   min-width: 585px;
   justify-content: center;
   margin: 10px 10px 10px 250px;
 }
+
+.front {
+
+}
+
+.board {
+  background-image: static/bulletin-board-banner.png
+
+}
 /* The sidebar menu */
 .sidenav {
+<<<<<<< HEAD
+  height: =100%; /* Full-height: remove this if you want "auto" height */
+  width: 250px; /* Set the width of the sidebar */
+=======
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 240px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  width: 200px; /* Set the width of the sidebar */
+>>>>>>> d859fd4289abc3f293472786c9aa19fe322e1c03
+  position: sticky; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: #79CFFF; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
+  background-color: #79CFFF; /* Blue */
+  overflow: visible; /* able horizontal scroll */
   padding-top: 20px;
 }
 
 /* The navigation menu links */
 .sidenav a {
-  padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
-  display: block;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -33,29 +74,17 @@
 
 .center {
   display: block;
-  margin-left: auto;
+  margin-left: 10;
   margin-right: auto;
-  width: 75%;
+  width: 50%;
 }
 
 /* Style page content */
 .main {
-  margin-left: 160px; /* Same as the width of the sidebar */
+  margin-left: 200px; /* Same as the width of the sidebar */
   padding: 0px 10px;
 }
-.button {
-  transition-duration: 0.4s;
-}
 
-.button:hover {
-  background-color: #C7B198; /* Green */
-  color: white;
-}
-
-.button1 {border-radius: 30%;}
-.button2 {border-radius: 30%;}
-.button3 {border-radius: 30%;}
-.button4 {border-radius: 30%;}
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}

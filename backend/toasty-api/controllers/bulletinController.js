@@ -15,8 +15,8 @@ exports.allBulletins = (req, res) => {
 //handle new note post
 exports.newNotePost = [
     //validate form fields
-    body("title").isLength({min: 1}).trim().withMessage('first name is required'),
-    body('message').isLength({min: 1}).trim().withMessage('last name is required'),
+    body("title").isLength({min: 1}).trim().withMessage('title is required'),
+    body('message').isLength({min: 1}).trim().withMessage('message is required'),
 
     //sanitize
     sanitizeBody("title").escape(),
