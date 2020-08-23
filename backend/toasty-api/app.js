@@ -12,7 +12,7 @@ var authRouter = require('./routes/auth');
 var bulletinRouter = require('./routes/bulletin');
 var bookBagRouter = require('./routes/bookBag');
 
-require('./passport')
+var passport = require('./passport')
 
 var app = express();
 
