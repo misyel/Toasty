@@ -10,7 +10,7 @@ let Login = {
                 </fieldset>
                 <fieldset>
                     <label for='password'>password:</label>
-                    <input name='password' type='text' required=true>
+                    <input name='password' type='password' required=true>
                 </fieldset>
                 <button type='submit' id='loginSubmit'> submit </button>
             </form>
@@ -50,7 +50,7 @@ let Login = {
             const token = data.token;
             localStorage.setItem('token', token);
             //redirect to home
-            window.location.href = "/#/bulletin";
+            window.location.href = "/#/home";
         })
     }
 }

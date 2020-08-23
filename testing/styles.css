@@ -1,12 +1,12 @@
 body{
-    background-color: white;
+    background-color: #f3f0eb;
     padding: 1rem;
     height: 100%;
 }
 
 /* The sidebar menu */
 .home-logo{
-    padding-left: 1em;
+    padding-left: 0.3em;
     width: 70%;
     height: auto;
     padding-bottom: 0.9em;
@@ -69,7 +69,7 @@ ul{
 .bulletin-list{
     text-decoration:none;
     color:#000;
-    background:#e8ded2;
+    background:#d6a395;
     display:block;
     height:10em;
     width:10em;
@@ -130,7 +130,7 @@ input, textarea{
 }
   
 .inputForm{
-    background: #f3e1e1;
+    background: #d6a395;
     border-radius: 10px;
     padding: 25px;
     margin: 150px 0;
@@ -183,7 +183,7 @@ textarea{
 }
 
 /*message styling*/
-.container {
+.container2 {
     border-radius: 5px;
     padding: 1em;
     margin: 10px 0;
@@ -204,7 +204,6 @@ textarea{
 .arrow .outer {
     width: 0;
     height: 0;
-    border-right: 20px solid #000000;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     position: absolute;
@@ -215,7 +214,7 @@ textarea{
 .arrow .inner {
     width: 0;
     height: 0;
-    border-right: 20px solid #e8ded2;
+    border-right: 20px solid #d6a395;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     position: absolute;
@@ -227,16 +226,65 @@ textarea{
     float: left;
     width: 300px;
     height: auto;
-    border: 1px solid #CCC;
-    background-color: #e8ded2;
-    border: 1px solid #000000;
+    background-color: #d6a395;
     padding: 6px 8px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -o-border-radius: 5px;
     border-radius: 5px;
+    -webkit-box-shadow: 3px 3px 5px rgba(33,33,33,.7);
+
   }
   
 .message-body p {
     margin: 0;
 }
+
+.banner{
+    display:block;
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.coming-soon{
+    width: 100%;
+    height: auto;
+}
+
+/*modal*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #f3f0eb;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+.center-button{
+    padding-top: 20px;
+    text-align: center;
+
+}
+.modal-button{
+    font-weight: bold;
+    font-size: 15px;
+    background: none;
+    box-shadow: none;
+    border: none;
+  }

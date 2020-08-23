@@ -2,9 +2,8 @@ let Navbar = {
     render: async () => {
         let view = `
         <nav class="navbar">
-            <div>
-                <img class='home-logo' src='../images/toasty-logo.png'>
-            </div>
+            <a href="/#/home"><img class='nav-logo' src='../images/toasty-logo.png'>
+            </a>
             <a class="navbar-item" href="/#/bulletin">
                 <img class='nav-logo' src='../images/bulletin-board.png'>
                 <br>
@@ -15,21 +14,19 @@ let Navbar = {
                 <br>
                 
             </a>
-            <a class="navbar-item" href="/#/">
-                <img class='nav-logo' src='../images/star.png'>
-                <br>      
-            </a>
             <a class="navbar-item" href="/#/chat">
                 <img class='nav-logo' src='../images/chat.png'>
                 <br>      
             </a>
-            <a class="navbar-item" href="/#/">
-            <img class='nav-logo' src='../images/show-and-tell.png'>
-            <br>      
-        </a>
-            <a class="navbar-item" href="/#/signup">
-                signup
+            <a class="navbar-item" href="/#/comingsoon">
+                <img class='nav-logo' src='../images/star.png'>
+                <br>      
             </a>
+            <a class="navbar-item" href="/#/comingsoon">
+                <img class='nav-logo' src='../images/show-and-tell.png'>
+            <br>      
+            </a>
+
         </nav>
         `
         return view

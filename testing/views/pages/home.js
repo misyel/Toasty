@@ -1,6 +1,6 @@
 let Home = {
     render: async() => {
-        let view = `<div>hello</div>`
+        let view = `<img class='coming-soon' src='../images/new-login-banner.png'>`
         return view
     },
     after_render : async() => {}
