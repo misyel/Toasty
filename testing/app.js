@@ -12,7 +12,7 @@ import { Comingsoon } from './views/pages/comingsoon.js';
 import { Home } from './views/pages/home.js';
 
 
-
+console.log('loaded')
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
     '/' : Login

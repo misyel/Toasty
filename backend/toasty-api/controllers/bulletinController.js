@@ -23,6 +23,10 @@ exports.newNotePost = [
     sanitizeBody('message').escape(),
 
     (req, res, next) => {
+
+        if(req.user.type != 'Teacher'){
+            return res.status(400).json({message: 'you dont have access'})
+        }
        //get errors
        const errors = validationResult(req);
 

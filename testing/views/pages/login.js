@@ -1,5 +1,8 @@
 let Login = {
     render: async() => {
+        const nav = document.querySelector('nav');
+        console.log(nav)
+        nav.style.display = 'none'
         let view = `
         <div class='container'>
             <form class='inputForm' id='loginForm'>
@@ -42,15 +45,17 @@ let Login = {
             const data = await response.json();
             console.log(data)
             const status = await response.status;
-            if(status == 400){
-                console.log('invalid user')
+            console.log(status)
+            if(status == 200){
+                //store token
+                const token = data.token;
+                localStorage.setItem('token', token);
+                //redirect to home
+                window.location.href = "/#/home";
             }
-
-            //store token
-            const token = data.token;
-            localStorage.setItem('token', token);
-            //redirect to home
-            window.location.href = "/#/home";
+            else if(status == 400){
+                alert('invalid username or password')
+            }
         })
     }
 }

@@ -20,10 +20,11 @@ router.post('/login', async (req, res, next) => {
             firstName: user.firstName,
             lastName: user.lastName,
             username: user.username,
+            type: user.constructor.modelName,
             _id: user._id
         }
           //Sign the JWT token and populate the payload with the user email and id
-          const token = jwt.sign({ user: user.username, id: user._id },process.env.JWT_KEY);
+          const token = jwt.sign({ user: user.username, id: user._id, type: user.constructor.modelName }, process.env.JWT_KEY, {expiresIn: '2h'});
           //Send back the token to the user
           return res.json({userDetails, token });
         });     } catch (error) {
